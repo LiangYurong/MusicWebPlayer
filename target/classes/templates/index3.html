@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:if="${flag == 'true'}" th:text="flag为真"></div>
+    <div th:unless="${password==1234567}" th:text="password不是1234567"></div>
+    <div th:if="${id==1}" th:text="id为1"></div>
+</body>
+</html>

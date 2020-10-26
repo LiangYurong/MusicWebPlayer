@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--
+    namespace:是该xml文件在项目中的路径
+    parameterType：写实体类在项目中的路径；代表调用方法时参数的数据类型
+    id:实际调用MyBatis方法时需要用到的参数
+-->
+
+
+<mapper namespace="com.mapper.AccountMapper">
+    <!--添加数据-->
+    <insert id="insertAccount" parameterType="com.entity.Account">
+        insert into t_account (username,password,age) values (#{username},#{password},#{age});
+    </insert>
+
+    <!--删除数据-->
+    <delete id="deleteAccount">
+        delete from t_account where id= #{id}
+    </delete>
+
+    <!--更改数据-->
+    <update id="updateAccount"></update>
+
+    <!--查找数据-->
+    <select id="findAccount"></select>
+</mapper>

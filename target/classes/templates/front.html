@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+
+<!--设置距离顶部的间距-->
+<div class="m-container" style="padding: 30px">
+    <div class="ui  container ">
+        <table id="songtable" class="ui compact   table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>歌曲</th>
+                <th>时长</th>
+                <th>歌手</th>
+                <th class="center">喜欢</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="blog,iterStat:${page.content}">
+                <td th:text="${iterStat.count}" class="ui m-text">1</td>
+                <td th:text="${blog.title}" class="ui m-text">爱</td>
+                <td th:text="${blog.type.name}" class="ui m-text">1:09:23</td>
+                <td th:text="${blog.recommend ? '是':'否'}" class="ui m-text">周杰伦</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">2</td>
+                <td>算法</td>
+                <td>1:09:23</td>
+                <td>需导入</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">3</td>
+                <td>分割</td>
+                <td>1:09:23</td>
+                <td>儿童椅</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">4</td>
+                <td>爱多个</td>
+                <td>1:09:23</td>
+                <td>鱼塘局</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">5</td>
+                <td>算法</td>
+                <td>1:09:23</td>
+                <td>需导入</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">6</td>
+                <td>分割</td>
+                <td>1:09:23</td>
+                <td>儿童椅</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ui m-text">7</td>
+                <td>爱多个</td>
+                <td>1:09:23</td>
+                <td>鱼塘局</td>
+                <td>
+                    <div class="ui two grid">
+                        <a href="" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=" basic ui "><i
+                                class="red heart icon"></i></a>
+                        <div th:text="" class="ui center">3</div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="10">
+                    <!--                    <div class="ui fluid icon buttons">-->
+                    <!--                        <button class="ui basic button"><i class="random left icon"></i></button>-->
+                    <!--                        <button class="ui basic button"><i class="fast backward center icon"></i></button>-->
+                    <!--                        <button class="ui basic button"><i class="play right icon"></i></button>-->
+                    <!--                        <button class="ui basic button"><i class="fast forward justify icon"></i></button>-->
+                    <!--                    </div>-->
+                    <div class="ui ">
+                        <button class="ui basic button"><i class="fast backward center icon"></i></button>
+                        <audio  id="songmessage" src="../static/music/夜的第七章.flac" th:src="${song.link}" controls loop ></audio> <!--autoplay-->
+<!--                        <button class="ui basic button"><i class="fast forward justify icon"></i></button>-->
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

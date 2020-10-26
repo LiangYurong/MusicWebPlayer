@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!-- 添加thymeleaf解析模板 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <script src="./jquery.min.js"></script>
+    <script src="./semantic.min.js"></script>
+</head>
+<body>
+
+<form class="ui form" th:method="post" th:action="@{/user/login}">
+    <div class="field">
+        <label>账户</label>
+        <input type="text" name="name" placeholder="账户">
+    </div>
+    <div class="field">
+        <label>密码</label>
+        <input type="text" name="password" placeholder="密码">
+    </div>
+    <button class="ui button" type="submit">提交</button>
+</form>
+
+</body>
+</html>

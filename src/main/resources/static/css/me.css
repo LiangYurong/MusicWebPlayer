@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: url("../images/bg.png");
+    background-size: cover; /* 背景图片覆盖 */
+    background-attachment: fixed; /* 背景图片不随着滚动条滚动而滚动 */
+}
+
+/*设置容器的大小*/
+.m-container {
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+.m-padded {
+    padding: 1em !important;
+}
+
+/* 设置字体样式 */
+.m-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
